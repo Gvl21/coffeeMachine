@@ -3,21 +3,11 @@ import java.util.Scanner;
 public class CoffeeMachine extends VendingCoffee{
 
     Scanner scn = new Scanner(System.in);
-
+    boolean isRun = true;
     void run() {
-        boolean isRun = true;
-        boolean isRun2 = isRun;
-        if (isRun == false) {
-            System.out.println("커피머신이 작동중이지 않습니다.");
-        }
+        runCheck();
+
         while (isRun) {
-            System.out.println("커피 머신이 가동되었습니다.");
-            System.out.println("");
-            System.out.println("현재 커피머신 상태 : 작동중");
-            System.out.println("======================================");
-            break;
-        }
-        while (isRun2) {
             System.out.println("남은 재료와 돈 상태");
             System.out.println("물 : " + ingredient.getWater() + "ml");
             System.out.println("우유 : " + ingredient.getMilk() + "ml");
@@ -44,7 +34,7 @@ public class CoffeeMachine extends VendingCoffee{
                         break;
                     case 4:
                         quit();
-                        isRun2 = false;
+                        isRun = false;
                         break;
                     default:
                         System.out.println("************************");
@@ -55,6 +45,16 @@ public class CoffeeMachine extends VendingCoffee{
                 System.out.println("제시된 옵션만 사용해주세요.");
             }
 
+        }
+    }
+    public void runCheck(){
+        if(this.isRun){
+        System.out.println("커피 머신이 가동되었습니다.");
+        System.out.println("");
+        System.out.println("현재 커피머신 상태 : 작동중");
+        System.out.println("======================================");}
+        else {
+            System.out.println("커피머신이 작동중이지 않습니다.");
         }
     }
 
