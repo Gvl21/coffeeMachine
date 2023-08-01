@@ -15,6 +15,7 @@ public class CoffeeMachine extends VendingCoffee{
             System.out.println("커피 머신이 가동되었습니다.");
             System.out.println("");
             System.out.println("현재 커피머신 상태 : 작동중");
+            System.out.println("======================================");
             break;
         }
         while (isRun2) {
@@ -27,6 +28,7 @@ public class CoffeeMachine extends VendingCoffee{
             System.out.println("");
             System.out.println("옵션을 선택하세요");
             System.out.println("(1. 구매, 2. 채우기, 3. 가져가기, 4. 종료)");
+            System.out.print(">");
 
             int selectOption = Integer.parseInt(scn.nextLine());
             switch (selectOption) {
@@ -43,7 +45,10 @@ public class CoffeeMachine extends VendingCoffee{
                     quit();
                     isRun2 =  false;
                     break;
-
+                default:
+                    System.out.println("************************");
+                    System.out.println("주어진 옵션만 사용해주세요");
+                    System.out.println("************************");
             }
         }
     }
