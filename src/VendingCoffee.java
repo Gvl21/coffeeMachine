@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class VendingCoffee implements VendingMachine{
     Ingredient ingredient = new Ingredient(50000,400,540,120,9);
+    Espresso espresso = new Espresso();
+    Latte latte =  new Latte();
+    Cappuccino cappuccino = new Cappuccino();
     Scanner scn = new Scanner(System.in);
     @Override
     public void buy() {
@@ -15,27 +18,27 @@ public class VendingCoffee implements VendingMachine{
 
         switch (selectedCoffee) {
             case 1:
-                coffee = "에스프레소";
-                ingredient.setMoney(4000);
-                ingredient.setCoffeeBeans(-16);
-                ingredient.setWater(-250);
+                coffee = espresso.coffee;
+                ingredient.setMoney(espresso.getMoney());
+                ingredient.setCoffeeBeans(-espresso.getCoffeeBeans());
+                ingredient.setWater(-espresso.getWater());
                 ingredient.setDisposableCup(-1);
                 break;
             case 2:
-                coffee = "라떼";
-                ingredient.setMoney(7000);
-                ingredient.setWater(-350);
-                ingredient.setMilk(-75);
-                ingredient.setCoffeeBeans(-20);
-                ingredient.setDisposableCup(-1);
+                coffee = latte.coffee;
+                ingredient.setMoney(latte.getMoney());
+                ingredient.setWater(-latte.getWater());
+                ingredient.setMilk(-latte.getMilk());
+                ingredient.setCoffeeBeans(-latte.getCoffeeBeans());
+                ingredient.setDisposableCup(-latte.getDisposableCup());
                 break;
             case 3:
-                coffee = "카푸치노";
-                ingredient.setMoney(6000);
-                ingredient.setWater(-200);
-                ingredient.setMilk(-100);
-                ingredient.setCoffeeBeans(-12);
-                ingredient.setDisposableCup(-1);
+                coffee = cappuccino.coffee;
+                ingredient.setMoney(cappuccino.getMoney());
+                ingredient.setWater(-cappuccino.getWater());
+                ingredient.setMilk(-cappuccino.getMilk());
+                ingredient.setCoffeeBeans(-cappuccino.getCoffeeBeans());
+                ingredient.setDisposableCup(-cappuccino.getDisposableCup());
                 break;
         }
         System.out.println("커피를 구매하였습니다. 감사합니다.");

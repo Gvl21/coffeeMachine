@@ -1,10 +1,10 @@
 public class Ingredient {
-    int money;
-    int water;
-    int milk;
-    int coffeeBeans;
-    int disposableCup ;
-
+    private int money;
+    private int water;
+    private int milk;
+    private int coffeeBeans;
+    private int disposableCup ;
+    public Ingredient(){};
     public Ingredient(int money, int water, int milk, int coffeeBeans, int disposableCup) {
         this.money = money;
         this.water = water;
