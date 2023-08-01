@@ -44,6 +44,7 @@ public class CoffeeMachine extends VendingCoffee{
                         break;
                     case 4:
                         quit();
+                        isRun2 = false;
                         break;
                     default:
                         System.out.println("************************");
