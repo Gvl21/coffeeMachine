@@ -1,4 +1,4 @@
-public class Ingredient {
+public class Ingredient  {
     private int money;
     private int water;
     private int milk;

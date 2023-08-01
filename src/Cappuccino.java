@@ -1,4 +1,4 @@
-public class Cappuccino extends Ingredient {
+public class Cappuccino extends Coffee {
     String coffee = "카푸치노";
 
 

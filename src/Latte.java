@@ -1,4 +1,4 @@
-public class Latte extends Ingredient {
+public class Latte extends Coffee {
     String coffee = "라떼";
 
 
