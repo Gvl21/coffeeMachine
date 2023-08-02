@@ -29,6 +29,7 @@ public class Espresso extends Coffee {
     public int getCoffeeBeans() {
         return coffeeBeans;
     }
+    public String getName(){return coffee;}
 
 
 }

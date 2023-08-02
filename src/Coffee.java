@@ -1,6 +1,6 @@
 
     public class Coffee extends Ingredient {
-
+        String coffee = "";
         int money;
         int water;
         int coffeeBeans;
@@ -27,7 +27,7 @@
             return coffeeBeans;
         }
 
-
+        public String getName(){return coffee;}
     }
 
 

@@ -27,6 +27,7 @@ public class Cappuccino extends Coffee {
     public int getCoffeeBeans() {
         return coffeeBeans;
     }
+    public String getName(){return coffee;}
 
 
 }

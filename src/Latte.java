@@ -12,21 +12,19 @@ public class Latte extends Coffee {
     public int getMoney() {
         return money;
     }
-
     @Override
     public int getWater() {
         return water;
     }
-
     @Override
     public int getMilk() {
         return milk;
     }
-
     @Override
     public int getCoffeeBeans() {
         return coffeeBeans;
     }
+    public String getName(){return coffee;}
 
 
 
